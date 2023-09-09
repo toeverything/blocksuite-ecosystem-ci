@@ -1,0 +1,9 @@
+{
+  "name": "ecosystem-ci",
+  "version": "0.0.0",
+  "description": "",
+  "license": " MPL-2.0 license",
+  "private": true,
+  "main": "index.js",
+  "scripts": {}
+}
