@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@blocksuite/blocks": "^0.8.0",
-    "@blocksuite/store": "^0.8.0",
-    "@toeverything/y-indexeddb": "0.9.0-canary.12"
+    "@blocksuite/store": "^0.8.0"
   }
 }
