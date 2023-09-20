@@ -1,5 +1,13 @@
 # BlockSuite Ecosystem CI
 
+This repository is used for:
+
+- Verifying downstream integration state of BlockSuite packages.
+- Verifying smoke test state of newly published nightly versions.
+- Verifying editor data compatibility.
+
+Documentation WIP.
+
 ## Examples
 
 - [Webpack](./packages/webpack)
@@ -9,4 +17,4 @@
 
 ## License
 
-[MPL-2.0 license](./LICENSE)
+[MPL-2.0](./LICENSE)
