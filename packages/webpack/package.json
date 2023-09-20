@@ -1,0 +1,20 @@
+{
+  "name": "rspack-react-ts-starter",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack build"
+  },
+  "dependencies": {
+    "@blocksuite/blocks": "^0.8.0",
+    "@blocksuite/editor": "^0.8.0",
+    "@blocksuite/store": "^0.8.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "typescript": "^5.0.4",
+    "webpack": "latest",
+    "webpack-cli": "latest"
+  }
+}
