@@ -7,13 +7,13 @@
     "build": "webpack build"
   },
   "dependencies": {
-    "@blocksuite/blocks": "^0.8.0",
-    "@blocksuite/editor": "^0.8.0",
-    "@blocksuite/store": "^0.8.0"
+    "@blocksuite/blocks": "latest",
+    "@blocksuite/editor": "latest",
+    "@blocksuite/store": "latest"
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.3",
-    "typescript": "^5.0.4",
+    "typescript": "latest",
     "webpack": "latest",
     "webpack-cli": "latest"
   }

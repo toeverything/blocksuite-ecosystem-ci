@@ -6,13 +6,13 @@ settings:
 
 dependencies:
   '@blocksuite/blocks':
-    specifier: ^0.8.0
+    specifier: latest
     version: 0.8.0(@blocksuite/block-std@0.8.0)(@blocksuite/lit@0.8.0)(@blocksuite/store@0.8.0)(@toeverything/theme@0.7.15)(nanoid@4.0.2)(yjs@13.6.8)
   '@blocksuite/editor':
-    specifier: ^0.8.0
+    specifier: latest
     version: 0.8.0(@blocksuite/blocks@0.8.0)(@blocksuite/lit@0.8.0)(@blocksuite/store@0.8.0)(@toeverything/theme@0.7.15)
   '@blocksuite/store':
-    specifier: ^0.8.0
+    specifier: latest
     version: 0.8.0(async-call-rpc@6.3.1)(lit@2.8.0)(yjs@13.6.8)
 
 devDependencies:
@@ -20,7 +20,7 @@ devDependencies:
     specifier: latest
     version: 0.3.4(react-refresh@0.14.0)
   typescript:
-    specifier: ^5.0.4
+    specifier: latest
     version: 5.2.2
 
 packages:

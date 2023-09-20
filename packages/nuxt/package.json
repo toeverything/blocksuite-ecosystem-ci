@@ -10,13 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@blocksuite/editor": "^0.8.0",
     "@nuxt/devtools": "latest",
-    "nuxt": "^3.7.3",
-    "typescript": "^5.2.2"
+    "nuxt": "latest",
+    "typescript": "latest"
   },
   "dependencies": {
-    "@blocksuite/blocks": "^0.8.0",
-    "@blocksuite/store": "^0.8.0"
+    "@blocksuite/blocks": "latest",
+    "@blocksuite/editor": "latest",
+    "@blocksuite/store": "latest"
   }
 }
