@@ -1,0 +1,20 @@
+{
+  "name": "rspack-react-ts-starter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.js"
+  },
+  "dependencies": {
+    "@blocksuite/blocks": "latest",
+    "@blocksuite/editor": "latest",
+    "@blocksuite/store": "latest"
+  },
+  "devDependencies": {
+    "@chialab/esbuild-plugin-html": "^0.17.3",
+    "esbuild": "^0.19.3",
+    "esbuild-plugin-polyfill-node": "^0.3.0",
+    "typescript": "latest"
+  }
+}
