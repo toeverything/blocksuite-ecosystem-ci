@@ -8,9 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@blocksuite/blocks": "latest",
-    "@blocksuite/editor": "latest",
-    "@blocksuite/store": "latest",
+    "@blocksuite/blocks": "nightly",
+    "@blocksuite/editor": "nightly",
+    "@blocksuite/store": "nightly",
     "@reactuses/core": "^4.0.7",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",
