@@ -4,5 +4,12 @@
   "description": "Ecosystem CI",
   "license": " MPL-2.0 license",
   "private": true,
-  "scripts": {}
+  "scripts": {
+    "build": "pnpm build:esbuild && pnpm build:next && pnpm build:nuxt && pnpm build:rspack && pnpm build:webpack",
+    "build:esbuild": "pnpm --filter @blocksuite-ecosystem-ci/esbuild build",
+    "build:next": "pnpm --filter @blocksuite-ecosystem-ci/next build",
+    "build:nuxt": "pnpm --filter @blocksuite-ecosystem-ci/nuxt build",
+    "build:rspack": "pnpm --filter @blocksuite-ecosystem-ci/rspack build",
+    "build:webpack": "pnpm --filter @blocksuite-ecosystem-ci/webpack build"
+  }
 }

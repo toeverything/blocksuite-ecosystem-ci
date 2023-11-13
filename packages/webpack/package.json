@@ -1,5 +1,5 @@
 {
-  "name": "rspack-react-ts-starter",
+  "name": "webpack",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -7,9 +7,9 @@
     "build": "webpack build"
   },
   "dependencies": {
-    "@blocksuite/blocks": "latest",
-    "@blocksuite/editor": "latest",
-    "@blocksuite/store": "latest"
+    "@blocksuite/blocks": "nightly",
+    "@blocksuite/editor": "nightly",
+    "@blocksuite/store": "nightly"
   },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.3",

@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "c",
   "private": true,
   "type": "module",
   "scripts": {
@@ -15,8 +15,8 @@
     "typescript": "latest"
   },
   "dependencies": {
-    "@blocksuite/blocks": "latest",
-    "@blocksuite/editor": "latest",
-    "@blocksuite/store": "latest"
+    "@blocksuite/blocks": "nightly",
+    "@blocksuite/editor": "nightly",
+    "@blocksuite/store": "nightly"
   }
 }
