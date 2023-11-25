@@ -13,10 +13,5 @@
     "@nuxt/devtools": "latest",
     "nuxt": "latest",
     "typescript": "latest"
-  },
-  "dependencies": {
-    "@blocksuite/blocks": "nightly",
-    "@blocksuite/editor": "nightly",
-    "@blocksuite/store": "nightly"
   }
 }

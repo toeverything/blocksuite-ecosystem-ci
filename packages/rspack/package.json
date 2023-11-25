@@ -6,11 +6,6 @@
     "dev": "rspack serve",
     "build": "rspack build"
   },
-  "dependencies": {
-    "@blocksuite/blocks": "latest",
-    "@blocksuite/store": "latest",
-    "@blocksuite/editor": "latest"
-  },
   "devDependencies": {
     "@rspack/cli": "latest",
     "typescript": "latest"

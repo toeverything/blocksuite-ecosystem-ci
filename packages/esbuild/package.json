@@ -6,11 +6,6 @@
   "scripts": {
     "build": "node esbuild.js"
   },
-  "dependencies": {
-    "@blocksuite/blocks": "nightly",
-    "@blocksuite/editor": "nightly",
-    "@blocksuite/store": "nightly"
-  },
   "devDependencies": {
     "@chialab/esbuild-plugin-html": "^0.17.3",
     "esbuild": "^0.19.3",
