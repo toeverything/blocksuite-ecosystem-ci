@@ -1,32 +1,30 @@
-import { Schema, Workspace } from '@blocksuite/store'
-import { AffineSchemas } from '@blocksuite/blocks/models'
-import { EditorContainer } from '@blocksuite/editor'
+import { Schema, Workspace } from '@blocksuite/store';
+import { AffineSchemas } from '@blocksuite/blocks/models';
+import { EditorContainer } from '@blocksuite/editor';
+import '@blocksuite/editor/themes/affine.css';
+import './style.css';
 
-main()
+main();
 
-async function main() {
-  const schema = new Schema()
-  schema.register(AffineSchemas)
+function main() {
+  const schema = new Schema();
+  schema.register(AffineSchemas);
   const workspace = new Workspace({
-    id: 'workspace',
+    id: 'test',
     schema,
-  })
-  const editor = new EditorContainer()
-
+  });
   const page = workspace.createPage({
-    id: 'index',
-  })
-  await page.waitForLoaded()
-  const pageBlockId = page.addBlock('affine:page', {
-    title: new Text(),
-  })
-  page.addBlock('affine:surface', {}, pageBlockId)
-  const frameId = page.addBlock('affine:note', {}, pageBlockId)
-  page.addBlock('affine:paragraph', {}, frameId)
-  page.resetHistory()
+    id: 'page0',
+  });
+  page.load(() => {
+    const pageBlockId = page.addBlock('affine:page');
+    page.addBlock('affine:surface', {}, pageBlockId);
+    const noteId = page.addBlock('affine:note', {}, pageBlockId);
+    page.addBlock('affine:paragraph', {}, noteId);
+    page.resetHistory();
 
-  editor.page = page
-  editor.mode = 'page'
-
-  document.querySelector('#root')!.append(editor)
+    const editor = new EditorContainer();
+    editor.page = page;
+    document.querySelector('#root')!.append(editor);
+  });
 }

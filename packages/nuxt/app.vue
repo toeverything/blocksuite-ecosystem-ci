@@ -1,36 +1,33 @@
 <script setup lang="ts">
-import { Schema, Workspace } from '@blocksuite/store'
-import { AffineSchemas } from '@blocksuite/blocks/models'
-import { EditorContainer } from '@blocksuite/editor'
+import { Schema, Workspace } from '@blocksuite/store';
+import { AffineSchemas } from '@blocksuite/blocks/models';
+import { EditorContainer } from '@blocksuite/editor';
+import '@blocksuite/editor/themes/affine.css';
 
-const container = ref<HTMLDivElement>()
-
-const schema = new Schema()
-schema.register(AffineSchemas)
+const container = ref<HTMLDivElement>();
+const schema = new Schema();
+schema.register(AffineSchemas);
 const workspace = new Workspace({
-  id: 'workspace',
+  id: 'test',
   schema,
-})
-const editor = new EditorContainer()
-
+});
 const page = workspace.createPage({
-  id: 'index',
-})
-await page.waitForLoaded()
-const pageBlockId = page.addBlock('affine:page', {
-  title: new Text(),
-})
-page.addBlock('affine:surface', {}, pageBlockId)
-const frameId = page.addBlock('affine:note', {}, pageBlockId)
-page.addBlock('affine:paragraph', {}, frameId)
-page.resetHistory()
+  id: 'page0',
+});
+await page.load(() => {
+  const pageBlockId = page.addBlock('affine:page');
+  page.addBlock('affine:surface', {}, pageBlockId);
+  const noteId = page.addBlock('affine:note', {}, pageBlockId);
+  page.addBlock('affine:paragraph', {}, noteId);
+  page.resetHistory();
+});
 
-editor.page = page
-editor.mode = 'page'
+const editor = new EditorContainer();
+editor.page = page;
 
 onMounted(() => {
-  container.value!.append(editor)
-})
+  container.value!.append(editor);
+});
 </script>
 
 <template>

@@ -6,13 +6,11 @@
     "dev": "webpack serve",
     "build": "webpack build"
   },
-  "dependencies": {
-    "@blocksuite/blocks": "nightly",
-    "@blocksuite/editor": "nightly",
-    "@blocksuite/store": "nightly"
-  },
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
     "typescript": "latest",
     "webpack": "latest",
     "webpack-cli": "latest"

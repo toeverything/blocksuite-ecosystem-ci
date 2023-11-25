@@ -7,7 +7,7 @@ module.exports = {
   context: __dirname,
   mode: 'production',
   entry: {
-    main: './src/main.js',
+    main: './src/main.ts',
   },
   performance: { hints: false },
   module: {
@@ -17,6 +17,15 @@ module.exports = {
         resolve: {
           fullySpecified: false,
         },
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: ['ts-loader'],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

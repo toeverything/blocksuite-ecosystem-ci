@@ -12,5 +12,10 @@
     "build:nuxt": "pnpm --filter nuxt build",
     "build:rspack": "pnpm --filter rspack build",
     "build:webpack": "pnpm --filter webpack build"
+  },
+  "dependencies": {
+    "@blocksuite/blocks": "nightly",
+    "@blocksuite/store": "nightly",
+    "@blocksuite/editor": "nightly"
   }
 }

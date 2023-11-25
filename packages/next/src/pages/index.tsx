@@ -1,44 +1,42 @@
-import Head from 'next/head'
-import { useRef, useState } from 'react'
-import { useOnceEffect } from '@reactuses/core'
+import Head from 'next/head';
+import { useRef, useState } from 'react';
+import { useOnceEffect } from '@reactuses/core';
+import '@blocksuite/editor/themes/affine.css';
 
 export default function Index() {
-  const [loading, setLoading] = useState(true)
-  const ref = useRef<HTMLDivElement>(null)
+  const [loading, setLoading] = useState(true);
+  const ref = useRef<HTMLDivElement>(null);
 
   useOnceEffect(() => {
-    ;(async () => {
-      const { Schema, Workspace } = await import('@blocksuite/store')
-      const { AffineSchemas } = await import('@blocksuite/blocks/models')
-      const { EditorContainer } = await import('@blocksuite/editor')
+    (async () => {
+      const { Schema, Workspace } = await import('@blocksuite/store');
+      const { AffineSchemas } = await import('@blocksuite/blocks/models');
+      const { EditorContainer } = await import('@blocksuite/editor');
 
-      const schema = new Schema()
-      schema.register(AffineSchemas)
+      const schema = new Schema();
+      schema.register(AffineSchemas);
       const workspace = new Workspace({
-        id: 'workspace',
+        id: 'test',
         schema,
-      })
-      const editor = new EditorContainer()
-
+      });
       const page = workspace.createPage({
-        id: 'index',
-      })
-      await page.waitForLoaded()
-      const pageBlockId = page.addBlock('affine:page', {
-        title: new Text(),
-      })
-      page.addBlock('affine:surface', {}, pageBlockId)
-      const frameId = page.addBlock('affine:note', {}, pageBlockId)
-      page.addBlock('affine:paragraph', {}, frameId)
-      page.resetHistory()
+        id: 'page0',
+      });
+      await page.load(() => {
+        const pageBlockId = page.addBlock('affine:page');
+        page.addBlock('affine:surface', {}, pageBlockId);
+        const noteId = page.addBlock('affine:note', {}, pageBlockId);
+        page.addBlock('affine:paragraph', {}, noteId);
+        page.resetHistory();
+      });
 
-      editor.page = page
-      editor.mode = 'page'
+      const editor = new EditorContainer();
+      editor.page = page;
 
-      setLoading(false)
-      ref.current?.append(editor)
-    })()
-  }, [])
+      setLoading(false);
+      ref.current?.append(editor);
+    })();
+  }, []);
 
   return (
     <>
@@ -49,7 +47,7 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {loading && <span>Loading</span>}
-      <div ref={ref}></div>
+      <div id="app" ref={ref}></div>
     </>
-  )
+  );
 }
