@@ -15,14 +15,14 @@ importers:
         specifier: nightly
         version: 0.0.0-20231124234659-773f45dc-nightly(@blocksuite/block-std@0.0.0-20231124234659-773f45dc-nightly)(async-call-rpc@6.3.1)(yjs@13.6.8)
       '@blocksuite/global':
-        specifier: ^0.9.0
-        version: 0.9.0
+        specifier: nightly
+        version: 0.0.0-20231126143809-55f43c7d-nightly
       '@blocksuite/store':
         specifier: nightly
         version: 0.0.0-20231124234659-773f45dc-nightly(async-call-rpc@6.3.1)(lit@3.0.2)(yjs@13.6.8)
       '@blocksuite/virgo':
-        specifier: ^0.9.0
-        version: 0.9.0(lit@3.0.2)(yjs@13.6.8)
+        specifier: nightly
+        version: 0.0.0-20231126143809-55f43c7d-nightly(lit@3.0.2)(yjs@13.6.8)
     devDependencies:
       '@playwright/test':
         specifier: ^1.40.0
@@ -30,9 +30,6 @@ importers:
       '@types/node':
         specifier: ^20.8.10
         version: 20.10.0
-      express:
-        specifier: ^4.18.2
-        version: 4.18.2
       serve:
         specifier: ^14.2.1
         version: 14.2.1
@@ -548,10 +545,9 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@blocksuite/global@0.9.0:
-    resolution: {integrity: sha512-6TTQkJukAVORBhmHOfFIZf2ZvxAfNMU4fNhtI1zlQzcFtCfEAsjhy7j3HNz3aVjxy47Xnmt03n4hk5hU18KAPA==}
+  /@blocksuite/global@0.0.0-20231126143809-55f43c7d-nightly:
+    resolution: {integrity: sha512-rCwakE956+lwH4HCIiGXFCgb30+DntqaBWFx/ouv0i0MCIhcVFdPU1kRjkhXSDIat7MRpGXYw0SDTVt+SBting==}
     dependencies:
-      ansi-colors: 4.1.3
       zod: 3.22.4
     dev: false
 
@@ -611,13 +607,13 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /@blocksuite/virgo@0.9.0(lit@3.0.2)(yjs@13.6.8):
-    resolution: {integrity: sha512-HHDfrTgUVMboDFtCph2EH/cgHNpJI3EXh/PVOorEVsQHUARu21bgpxPzW+9xEVLWhGBLlfg+Y9LsXkpqdtIbMQ==}
+  /@blocksuite/virgo@0.0.0-20231126143809-55f43c7d-nightly(lit@3.0.2)(yjs@13.6.8):
+    resolution: {integrity: sha512-QJ6LTW7lLl2NzmdjDywVfLjlsX7uIQt19aMqtQiv88MrWtSpvVrgpvry1a22pmd8oIJE06NR5rkeRTefDvJkrw==}
     peerDependencies:
-      lit: ^2.7
+      lit: ^3.0.2
       yjs: ^13
     dependencies:
-      '@blocksuite/global': 0.9.0
+      '@blocksuite/global': 0.0.0-20231126143809-55f43c7d-nightly
       lit: 3.0.2
       yjs: 13.6.8
       zod: 3.22.4
@@ -3664,6 +3660,7 @@ packages:
   /ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
     engines: {node: '>=6'}
+    dev: true
 
   /ansi-escapes@4.3.2:
     resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
@@ -3897,26 +3894,6 @@ packages:
       iconv-lite: 0.4.24
       on-finished: 2.4.1
       qs: 6.10.3
-      raw-body: 2.5.1
-      type-is: 1.6.18
-      unpipe: 1.0.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /body-parser@1.20.1:
-    resolution: {integrity: sha512-jWi7abTbYwajOytWCQc37VulmWiRae5RyTpaCyDcS5/lMdtwSz5lOpDE67srw/HYe35f1z3fDQw+3txg7gNtWw==}
-    engines: {node: '>= 0.8', npm: 1.2.8000 || >= 1.4.16}
-    dependencies:
-      bytes: 3.1.2
-      content-type: 1.0.5
-      debug: 2.6.9
-      depd: 2.0.0
-      destroy: 1.2.0
-      http-errors: 2.0.0
-      iconv-lite: 0.4.24
-      on-finished: 2.4.1
-      qs: 6.11.0
       raw-body: 2.5.1
       type-is: 1.6.18
       unpipe: 1.0.0
@@ -5196,45 +5173,6 @@ packages:
       path-to-regexp: 0.1.7
       proxy-addr: 2.0.7
       qs: 6.10.3
-      range-parser: 1.2.1
-      safe-buffer: 5.2.1
-      send: 0.18.0
-      serve-static: 1.15.0
-      setprototypeof: 1.2.0
-      statuses: 2.0.1
-      type-is: 1.6.18
-      utils-merge: 1.0.1
-      vary: 1.1.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /express@4.18.2:
-    resolution: {integrity: sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==}
-    engines: {node: '>= 0.10.0'}
-    dependencies:
-      accepts: 1.3.8
-      array-flatten: 1.1.1
-      body-parser: 1.20.1
-      content-disposition: 0.5.4
-      content-type: 1.0.5
-      cookie: 0.5.0
-      cookie-signature: 1.0.6
-      debug: 2.6.9
-      depd: 2.0.0
-      encodeurl: 1.0.2
-      escape-html: 1.0.3
-      etag: 1.8.1
-      finalhandler: 1.2.0
-      fresh: 0.5.2
-      http-errors: 2.0.0
-      merge-descriptors: 1.0.1
-      methods: 1.1.2
-      on-finished: 2.4.1
-      parseurl: 1.3.3
-      path-to-regexp: 0.1.7
-      proxy-addr: 2.0.7
-      qs: 6.11.0
       range-parser: 1.2.1
       safe-buffer: 5.2.1
       send: 0.18.0
@@ -8518,13 +8456,6 @@ packages:
 
   /qs@6.10.3:
     resolution: {integrity: sha512-wr7M2E0OFRfIfJZjKGieI8lBKb7fRCH4Fv5KNPEs7gJ8jadvotdsS08PzOKR7opXhZ/Xkjtt3WF9g38drmyRqQ==}
-    engines: {node: '>=0.6'}
-    dependencies:
-      side-channel: 1.0.4
-    dev: true
-
-  /qs@6.11.0:
-    resolution: {integrity: sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==}
     engines: {node: '>=0.6'}
     dependencies:
       side-channel: 1.0.4
