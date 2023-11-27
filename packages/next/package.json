@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 3001",
+    "test": "playwright test"
   },
   "dependencies": {
     "@reactuses/core": "^4.0.7",
