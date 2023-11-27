@@ -25,6 +25,6 @@ function main() {
 
     const editor = new EditorContainer();
     editor.page = page;
-    document.querySelector('#root')!.append(editor);
+    document.querySelector('#root')?.append(editor);
   });
 }
