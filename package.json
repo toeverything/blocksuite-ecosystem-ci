@@ -9,9 +9,9 @@
   "dependencies": {
     "@blocksuite/blocks": "nightly",
     "@blocksuite/editor": "nightly",
-    "@blocksuite/global": "^0.9.0",
+    "@blocksuite/global": "nightly",
     "@blocksuite/store": "nightly",
-    "@blocksuite/virgo": "^0.9.0"
+    "@blocksuite/virgo": "nightly"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.0",
