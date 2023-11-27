@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "node esbuild.js"
+    "build": "node esbuild.js",
+    "serve": "serve -s ./dist -l 3000",
+    "test": "playwright test"
   },
   "devDependencies": {
     "@chialab/esbuild-plugin-html": "^0.17.3",

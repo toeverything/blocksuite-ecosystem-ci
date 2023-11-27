@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack serve",
-    "build": "webpack build"
+    "build": "webpack build",
+    "serve": "serve -s ./dist -l 3004",
+    "test": "playwright test"
   },
   "devDependencies": {
     "css-loader": "^6.8.1",

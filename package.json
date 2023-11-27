@@ -5,17 +5,17 @@
   "license": " MPL-2.0 license",
   "private": true,
   "packageManager": "pnpm@8.10.2",
-  "scripts": {
-    "build": "pnpm build:esbuild && pnpm build:next && pnpm build:nuxt && pnpm build:rspack && pnpm build:webpack",
-    "build:esbuild": "pnpm --filter esbuild build",
-    "build:next": "pnpm --filter next build",
-    "build:nuxt": "pnpm --filter nuxt build",
-    "build:rspack": "pnpm --filter rspack build",
-    "build:webpack": "pnpm --filter webpack build"
-  },
+  "scripts": {},
   "dependencies": {
     "@blocksuite/blocks": "nightly",
+    "@blocksuite/editor": "nightly",
+    "@blocksuite/global": "^0.9.0",
     "@blocksuite/store": "nightly",
-    "@blocksuite/editor": "nightly"
+    "@blocksuite/virgo": "^0.9.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.8.10",
+    "serve": "^14.2.1"
   }
 }
