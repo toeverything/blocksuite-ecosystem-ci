@@ -18,6 +18,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    fallback: {
+      stream: require.resolve('readable-stream'),
+    },
+  },
   plugins: [
     new rspack.HtmlRspackPlugin({
       template: './index.html',

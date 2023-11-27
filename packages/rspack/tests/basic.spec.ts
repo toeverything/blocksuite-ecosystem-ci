@@ -10,7 +10,7 @@ import { assertText, assertEmpty } from '../../../tests/utils/asserts';
 
 const TEST_URL = `http://localhost:3003`;
 
-test.describe('webpack build test', () => {
+test.describe('rspack build test', () => {
   test('basic input & undo/redo', async ({ page }) => {
     await page.goto(TEST_URL);
 
