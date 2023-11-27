@@ -26,37 +26,52 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build and Test esbuild
+      - name: Build esbuild
         run: |
           cd packages/esbuild
           pnpm run build
           pnpm serve
+      - name: Run esbuild tests
+        run: |
+          cd packages/esbuild
           pnpm test
 
-      - name: Build and Test next
+      - name: Build next
         run: |
           cd packages/next
           pnpm run build
           pnpm start
+      - name: Run next tests
+        run: |
+          cd packages/next
           pnpm test
 
-      - name: Build and Test nuxt
+      - name: Build nuxt
         run: |
           cd packages/nuxt
           pnpm run build
           pnpm preview
+      - name: Run nuxt tests
+        run: |
+          cd packages/nuxt
           pnpm test
 
-      - name: Build and Test rspack
+      - name: Build rspack
         run: |
           cd packages/rspack
           pnpm run build
           pnpm serve
+      - name: Run rspack tests
+        run: |
+          cd packages/rspack
           pnpm test
 
-      - name: Build and Test webpack
+      - name: Build webpack
         run: |
           cd packages/webpack
           pnpm run build
           pnpm serve
+      - name: Run webpack tests
+        run: |
+          cd packages/webpack
           pnpm test
