@@ -5,6 +5,16 @@ import { defineConfig } from '@playwright/test';
 export default defineConfig({
   testDir: 'tests',
   fullyParallel: true,
+  webServer: {
+    command: 'pnpm preview',
+    port: 3002,
+    // command: process.env.CI ? 'pnpm preview' : 'pnpm dev',
+    // port: process.env.CI ? 4173 : 5173,
+    reuseExistingServer: !process.env.CI,
+    env: {
+      COVERAGE: process.env.COVERAGE ?? '',
+    },
+  },
   use: {
     browserName:
       (process.env.BROWSER as PlaywrightWorkerOptions['browserName']) ??

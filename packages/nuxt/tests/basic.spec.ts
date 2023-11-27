@@ -8,8 +8,7 @@ import {
 } from '../../../tests/utils/keyboard';
 import { assertText, assertEmpty } from '../../../tests/utils/asserts';
 
-const PORT = 3002;
-const TEST_URL = `http://localhost:${PORT}`;
+const TEST_URL = `http://localhost:3002`;
 
 test.describe('webpack build test', () => {
   test('basic input & undo/redo', async ({ page }) => {
