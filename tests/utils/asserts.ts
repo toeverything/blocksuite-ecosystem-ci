@@ -1,4 +1,5 @@
-import { Page, expect } from '@playwright/test';
+import { expect } from '@playwright/test';
+import type { Page } from '@playwright/test';
 import { getStringFromRichText } from './virgo';
 import { currentEditorIndex } from './multiple-editor';
 
@@ -12,13 +13,14 @@ export async function assertEmpty(page: Page) {
 }
 
 export async function assertRichTexts(page: Page, texts: string[]) {
-  const actualTexts = await page.evaluate(index => {
-    const editor = document.querySelectorAll('editor-container')[index];
+  const actualTexts = await page.evaluate(currentEditorIndex => {
+    const editorHost =
+      document.querySelectorAll('editor-host')[currentEditorIndex];
     const richTexts = Array.from(
-      editor?.querySelectorAll<any>('rich-text') ?? []
+      editorHost?.querySelectorAll<any>('rich-text') ?? []
     );
     return richTexts.map(richText => {
-      const editor = richText.vEditor;
+      const editor = richText.inlineEditor;
       return editor.yText.toString();
     });
   }, currentEditorIndex);
