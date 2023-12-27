@@ -46,14 +46,14 @@ jobs:
           pnpm run build
           pnpm test
 
-      - name: Build and Test rspack
-        run: |
-          cd packages/rspack
-          pnpm run build
-          pnpm test
-
       - name: Build and Test webpack
         run: |
           cd packages/webpack
+          pnpm run build
+          pnpm test
+
+      - name: Build and Test rspack
+        run: |
+          cd packages/rspack
           pnpm run build
           pnpm test

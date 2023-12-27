@@ -1,22 +1,24 @@
 import type { Page } from '@playwright/test';
-
-// eslint-disable-next-line @typescript-eslint/no-restricted-imports
-import type { VEditor } from '@blocksuite/virgo';
+import { currentEditorIndex } from './multiple-editor';
 
 export async function getStringFromRichText(
   page: Page,
   index = 0
 ): Promise<string> {
   await page.waitForTimeout(50);
-  return await page.evaluate(index => {
-    const richTexts = document.querySelectorAll('rich-text');
+  return await page.evaluate(
+    ({ index, currentEditorIndex }) => {
+      const editorHost =
+        document.querySelectorAll('editor-host')[currentEditorIndex];
+      const richTexts = editorHost.querySelectorAll('rich-text');
 
-    if (!richTexts) {
-      throw new Error('Cannot find rich-text');
-    }
+      if (!richTexts) {
+        throw new Error('Cannot find rich-text');
+      }
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const editor = (richTexts[index] as any).vEditor as VEditor;
-    return editor.yText.toString();
-  }, index);
+      const editor = (richTexts[index] as any).inlineEditor;
+      return editor.yText.toString();
+    },
+    { index, currentEditorIndex }
+  );
 }

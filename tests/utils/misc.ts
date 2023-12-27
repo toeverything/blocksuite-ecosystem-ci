@@ -1,14 +1,14 @@
 import { Page } from '@playwright/test';
 import { currentEditorIndex } from './multiple-editor';
 
-const RICH_TEXT_SELECTOR = '.virgo-editor';
+const RICH_TEXT_SELECTOR = '.inline-editor';
 
 type FocusRichTextOptions = {
   clickPosition?: { x: number; y: number };
 };
 
 const getEditorLocator = (page: Page) => {
-  return page.locator('editor-container').nth(currentEditorIndex);
+  return page.locator('doc-editor').nth(currentEditorIndex);
 };
 
 export async function focusRichText(
