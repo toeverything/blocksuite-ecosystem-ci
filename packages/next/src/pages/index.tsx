@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useRef, useState } from 'react';
 import { useOnceEffect } from '@reactuses/core';
-import '@blocksuite/editor/themes/affine.css';
+import '@blocksuite/presets/themes/affine.css';
 
 export default function Index() {
   const [loading, setLoading] = useState(true);
@@ -9,30 +9,12 @@ export default function Index() {
 
   useOnceEffect(() => {
     (async () => {
-      const { Schema, Workspace } = await import('@blocksuite/store');
-      const { AffineSchemas } = await import('@blocksuite/blocks/models');
-      const { EditorContainer } = await import('@blocksuite/editor');
-
-      const schema = new Schema();
-      schema.register(AffineSchemas);
-      const workspace = new Workspace({
-        id: 'test',
-        schema,
-      });
-      const page = workspace.createPage({
-        id: 'page0',
-      });
-      await page.load(() => {
-        const pageBlockId = page.addBlock('affine:page');
-        page.addBlock('affine:surface', {}, pageBlockId);
-        const noteId = page.addBlock('affine:note', {}, pageBlockId);
-        page.addBlock('affine:paragraph', {}, noteId);
-        page.resetHistory();
-      });
-
-      const editor = new EditorContainer();
+      const { createEmptyPage, DocEditor } = await import(
+        '@blocksuite/presets'
+      );
+      const page = createEmptyPage().init();
+      const editor = new DocEditor();
       editor.page = page;
-
       setLoading(false);
       ref.current?.append(editor);
     })();

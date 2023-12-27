@@ -4,6 +4,11 @@ const rspack = require('@rspack/core');
  * @type {import('@rspack/cli').Configuration}
  */
 module.exports = {
+  experiments: {
+    rspackFuture: {
+      disableApplyEntryLazily: true,
+    },
+  },
   context: __dirname,
   entry: {
     main: './src/main.ts',
@@ -17,11 +22,6 @@ module.exports = {
         },
       },
     ],
-  },
-  resolve: {
-    fallback: {
-      stream: require.resolve('readable-stream'),
-    },
   },
   plugins: [
     new rspack.HtmlRspackPlugin({
