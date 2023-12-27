@@ -7,10 +7,7 @@
   "packageManager": "pnpm@8.10.2",
   "scripts": {},
   "dependencies": {
-    "@blocksuite/blocks": "nightly",
-    "@blocksuite/editor": "nightly",
-    "@blocksuite/global": "nightly",
-    "@blocksuite/store": "nightly",
+    "@blocksuite/presets": "nightly",
     "@blocksuite/virgo": "nightly"
   },
   "devDependencies": {
