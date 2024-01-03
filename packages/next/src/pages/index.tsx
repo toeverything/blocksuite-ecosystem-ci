@@ -12,7 +12,7 @@ export default function Index() {
       const { createEmptyPage, DocEditor } = await import(
         '@blocksuite/presets'
       );
-      const page = createEmptyPage().init();
+      const page = await createEmptyPage().init();
       const editor = new DocEditor();
       editor.page = page;
       setLoading(false);

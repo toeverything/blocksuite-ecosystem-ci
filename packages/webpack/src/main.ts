@@ -5,7 +5,7 @@ import './style.css';
 main();
 
 async function main() {
-  const page = createEmptyPage().init();
+  const page = await createEmptyPage().init();
   const editor = new DocEditor();
   editor.page = page;
   document.querySelector('#root')!.append(editor);
