@@ -13,6 +13,9 @@ module.exports = {
   entry: {
     main: './src/main.ts',
   },
+  devServer: {
+    hot: true
+  },
   module: {
     rules: [
       {
@@ -21,6 +24,15 @@ module.exports = {
           fullySpecified: false,
         },
       },
+      {
+        test: /\.json$/,
+        use: [
+          {
+            loader: require.resolve('json-loader')
+          }
+        ],
+        type: 'javascript/auto'
+      }
     ],
   },
   plugins: [
