@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 
-import { focusRichText } from '../../../tests/utils/misc';
+import { focusRichText, waitNextFrame } from '../../../tests/utils/misc';
 import {
   redoByKeyboard,
   type,
@@ -14,7 +14,7 @@ test.describe('next build test', () => {
   test('basic input & undo/redo', async ({ page }) => {
     await page.goto(TEST_URL);
 
-    await page.waitForTimeout(600);
+    await waitNextFrame(page);
     await focusRichText(page);
     await type(page, 'hello');
 
