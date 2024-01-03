@@ -22,3 +22,7 @@ export async function focusRichText(
   // need to set `force` to true when clicking on `affine-selected-blocks`
   await locator.click({ force: true, position: options?.clickPosition });
 }
+
+export async function waitNextFrame(page: Page, time = 1000) {
+  await page.waitForTimeout(time);
+}
