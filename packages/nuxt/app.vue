@@ -3,7 +3,7 @@ import '@blocksuite/presets/themes/affine.css';
 import { createEmptyPage, DocEditor } from '@blocksuite/presets';
 
 const container = ref<HTMLDivElement>();
-const page = createEmptyPage().init();
+const page = await createEmptyPage().init();
 const editor = new DocEditor();
 editor.page = page;
 onMounted(() => {
