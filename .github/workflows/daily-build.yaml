@@ -57,3 +57,9 @@ jobs:
           cd packages/rspack
           pnpm run build
           pnpm test
+
+      - name: Build and Test angular
+        run: |
+          cd packages/angular
+          pnpm run build
+          pnpm test

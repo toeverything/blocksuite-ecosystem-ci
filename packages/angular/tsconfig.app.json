@@ -1,0 +1,18 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    /* INFO: With this properties I can run the project but the blocksuite dont work correctly */
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  },
+  "files": [
+    "src/main.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
+}
