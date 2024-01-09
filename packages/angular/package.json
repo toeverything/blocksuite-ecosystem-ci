@@ -1,0 +1,38 @@
+{
+  "name": "angular",
+  "scripts": {
+    "ng": "ng",
+    "dev": "ng serve --port 3005",
+    "serve": "serve -s ./dist -l 3005",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "playwright test"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "latest",
+    "@angular/common": "latest",
+    "@angular/compiler": "latest",
+    "@angular/core": "latest",
+    "@angular/forms": "latest",
+    "@angular/platform-browser": "latest",
+    "@angular/platform-browser-dynamic": "latest",
+    "@angular/router": "latest",
+    "rxjs": "latest",
+    "tslib": "latest",
+    "zone.js": "latest"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "latest",
+    "@angular/cli": "latest",
+    "@angular/compiler-cli": "latest",
+    "@types/jasmine": "latest",
+    "jasmine-core": "latest",
+    "karma": "latest",
+    "karma-chrome-launcher": "latest",
+    "karma-coverage": "latest",
+    "karma-jasmine": "latest",
+    "karma-jasmine-html-reporter": "latest",
+    "typescript": "~5.2.0"
+  }
+}
