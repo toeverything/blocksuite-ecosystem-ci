@@ -1,0 +1,15 @@
+diff --git a/package.json b/package.json
+index 5819f2fe2253489534ba64143b8b4c3f9b5870bf..30b29b8d3f19a12d6ec618446e023d0b521a6a28 100644
+--- a/package.json
++++ b/package.json
+@@ -29,10 +29,6 @@
+   },
+   "main": "dist/flexsearch.bundle.min.js",
+   "module": "dist/flexsearch.bundle.module.min.js",
+-  "browser": {
+-    "dist/flexsearch.bundle.min.js": "dist/flexsearch.bundle.min.js",
+-    "dist/flexsearch.bundle.module.min.js": "dist/flexsearch.bundle.module.min.js"
+-  },
+   "scripts": {
+     "build": "npm run copy && npm run build:bundle",
+     "build:bundle": "node task/build RELEASE=bundle DEBUG=false SUPPORT_WORKER=true SUPPORT_ENCODER=true SUPPORT_CACHE=true SUPPORT_ASYNC=true SUPPORT_STORE=true SUPPORT_TAGS=true SUPPORT_SUGGESTION=true SUPPORT_SERIALIZE=true SUPPORT_DOCUMENT=true POLYFILL=false",
