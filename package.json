@@ -13,10 +13,5 @@
     "@playwright/test": "^1.40.0",
     "@types/node": "^20.8.10",
     "serve": "^14.2.1"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "flexsearch@0.7.41": "patches/flexsearch@0.7.41.patch"
-    }
   }
 }
